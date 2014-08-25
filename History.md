@@ -4,6 +4,7 @@ unreleased
   * invoke callback for sendfile when client aborts
     - applies to `res.sendFile`, `res.sendfile`, and `res.download`
     - `err` will be populated with request aborted error
+  * use `etag` to generate `ETag` headers
 
 4.8.5 / 2014-08-18
 ==================

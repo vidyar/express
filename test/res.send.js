@@ -124,7 +124,7 @@ describe('res', function(){
 
       request(app)
       .get('/')
-      .expect('ETag', 'W/"7ff-2796319984"')
+      .expect('ETag', 'W/"7ff-a6ac74f0"')
       .end(done);
     })
 
@@ -213,7 +213,7 @@ describe('res', function(){
 
       request(app)
       .get('/')
-      .expect('ETag', 'W/"7ff-2796319984"')
+      .expect('ETag', 'W/"7ff-a6ac74f0"')
       .end(done);
     })
 
@@ -321,15 +321,17 @@ describe('res', function(){
 
   it('should respond with 304 Not Modified when fresh', function(done){
     var app = express();
+    var etag = '"asdf"';
 
     app.use(function(req, res){
       var str = Array(1024 * 2).join('-');
+      res.set('ETag', etag);
       res.send(str);
     });
 
     request(app)
     .get('/')
-    .set('If-None-Match', 'W/"7ff-2796319984"')
+    .set('If-None-Match', etag)
     .expect(304, done);
   })
 
@@ -375,7 +377,7 @@ describe('res', function(){
 
         request(app)
         .get('/')
-        .expect('etag', 'W/"c-1525560792"', done)
+        .expect('etag', 'W/"c-5aee35d8"', done)
       })
 
       it('should send ETag for empty string response', function(done){
@@ -404,7 +406,7 @@ describe('res', function(){
 
         request(app)
         .get('/')
-        .expect('etag', 'W/"7ff-2796319984"', done)
+        .expect('etag', 'W/"7ff-a6ac74f0"', done)
       });
 
       it('should not override ETag when manually set', function(done){
@@ -503,7 +505,7 @@ describe('res', function(){
 
         request(app)
         .get('/')
-        .expect('etag', 'W/"d-1486392595"', done)
+        .expect('etag', 'W/"d-58988d13"', done)
       })
     })
 

@@ -28,10 +28,10 @@
   "homepage": "http://expressjs.com/",
   "dependencies": {
     "accepts": "~1.0.7",
-    "buffer-crc32": "0.2.3",
     "debug": "1.0.4",
     "depd": "0.4.4",
     "escape-html": "1.0.1",
+    "etag": "~1.2.0",
     "finalhandler": "0.1.0",
     "media-typer": "0.2.0",
     "methods": "1.1.0",
