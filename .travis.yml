@@ -10,5 +10,3 @@ matrix:
 script: "npm run-script test-travis"
 
 
-notifications:
-  email: false
