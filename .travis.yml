@@ -13,3 +13,10 @@ after_script:
 # - psql -c 'create database if not exists test;' -U postgres
   - ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --ui=bdd --reporter=xunit-file
   - ./node_modules/.bin/istanbul report cobertura --dir shippable/codecoverage/
+notifications:
+     email:
+         recipients:
+             - vidya@shippable.com
+             - buildsampletest@gmail.com
+         on_success: always
+         on_failure: always
