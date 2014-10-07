@@ -24,3 +24,4 @@ notifications:
          on_failure: always
 
 archive: true
+cache: true
