@@ -12,6 +12,7 @@ script: "npm run-script test-travis"
 
 
 after_script:
+  - cp README.md ./shippable
   - ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --ui=bdd --reporter=xunit-file
   - ./node_modules/.bin/istanbul report cobertura --dir shippable/codecoverage/
   
@@ -25,5 +26,4 @@ notifications:
 
 archive: true
 cache: true
-after_script:
-  - cp README.md ./shippable
+
