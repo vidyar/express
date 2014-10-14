@@ -25,3 +25,5 @@ notifications:
 
 archive: true
 cache: true
+after_script:
+  - cp README.md ./shippable
