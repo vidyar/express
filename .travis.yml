@@ -11,6 +11,7 @@ matrix:
 script: "npm run-script test-travis"
 
 
+
 after_script:
   - ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --ui=bdd --reporter=xunit-file
   - ./node_modules/.bin/istanbul report cobertura --dir shippable/codecoverage/
