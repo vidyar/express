@@ -2,6 +2,7 @@ language: node_js
 
 
 build_image: shippable/minv2:beta 
+
 node_js:
   - "0.10"
   - "0.11"
@@ -28,4 +29,4 @@ notifications:
 archive: true
 cache: true
 
-build_image: shippable/minv2
+
