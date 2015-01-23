@@ -1,3 +1,5 @@
+[![Build Status](https://apibeta.shippable.com/projects/547e9df6c2b9a03657603ef3/badge?branchName=master)](https://appbeta.shippable.com/projects/547e9df6c2b9a03657603ef3/builds/latest)
+
 [![Express Logo](https://i.cloudup.com/zfY6lL7eFa-3000x3000.png)](http://expressjs.com/)
 
   Fast, unopinionated, minimalist web framework for [node](http://nodejs.org).
