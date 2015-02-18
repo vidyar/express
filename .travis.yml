@@ -17,6 +17,7 @@ after_script:
   - ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --ui=bdd --reporter=xunit-file
   - ./node_modules/.bin/istanbul report cobertura --dir shippable/codecoverage/
   - cp README.md ./shippable
+  - echo $BUILD_URL
   
 notifications:
      email:
@@ -28,6 +29,6 @@ notifications:
 
 archive: true
 
-cache: true
+#cache: true
 
 
