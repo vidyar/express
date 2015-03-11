@@ -7,12 +7,16 @@ node_js:
   - "0.11"
 env:
   - FOO=bar
+  - BAR=foo
  
 matrix:
   allow_failures:
     - node_js: "0.11"
       env: 
        - FOO=bar
+    - node_js: "0.11"
+      env: 
+       - BAR=foo
     
   
 script: "npm run-script test-travis"
