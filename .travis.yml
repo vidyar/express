@@ -22,7 +22,7 @@ notifications:
          recipients:
              - vidya@shippable.com
              - buildsampletest@gmail.com
-             - vidyac.raghav@gmail.com
+            # - vidyac.raghav@gmail.com
          on_success: always
          on_failure: always
 
