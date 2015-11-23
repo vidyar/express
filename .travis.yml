@@ -13,10 +13,10 @@ node_js:
 matrix:
   exclude:
     - node_js: "0.12"
-      foo=bar
+      env: foo=bar
   allow_failures:
     - node_js: "0.11"
-      foo=bar
+      env: foo=bar
   
 script: "npm run-script test-travis"
 
