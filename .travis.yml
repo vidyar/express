@@ -1,7 +1,5 @@
 language: node_js
 
-env:
- - foo=bar
  
 #build_image: shippable/minv2
 
@@ -13,10 +11,9 @@ node_js:
 matrix:
   exclude:
     - node_js: "0.12"
-      env: foo=bar
   allow_failures:
     - node_js: "0.11"
-      env: foo=bar
+    
   
 script: "npm run-script test-travis"
 
