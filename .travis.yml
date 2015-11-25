@@ -9,8 +9,8 @@ node_js:
   - "0.12"
 
 env:
- - Foo=bar
- - Bar=foo
+  - Foo=bar
+  - Bar=foo
  
 matrix:
   exclude:
