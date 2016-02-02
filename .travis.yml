@@ -17,6 +17,8 @@ env:
 matrix:
   exclude:
     - node_js: "0.12"
+    - node_js: "0.10"
+      env: Foo=bar
 
   allow_failures:
     - node_js: "0.11"
