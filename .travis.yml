@@ -38,6 +38,7 @@ after_script:
   - ./node_modules/.bin/istanbul report cobertura --dir shippable/codecoverage/
   - echo $key2
   - cp README.md ./shippable
+  - echo $BUILD_URL
   
 notifications:
      email:
@@ -50,6 +51,7 @@ notifications:
 
 archive: true
 
-cache: true
+#cache: true
 
-
+after_success:
+  - echo $BUILD_NUMBER
